@@ -1,0 +1,54 @@
+## Author
+
+-   **Name:** Jashvin Reddy Gundala
+-   **Email:** [gundala2\@illinois.edu](mailto:gundala2@illinois.edu){.email}
+
+## Purpose
+
+The purpose of the Batter App is to provide an interactive web application for exploring, visualizing, and analyzing batters in the **baseballr** package. This app is meant to target users(fans and analysts) to understand a batter's performance over a range of seasons from 2008 to 2024, inclusive. The Shiny application downloads the batters' data from the **baseballr** package, stores it in a csv file, and provides access to batter's information(listed in the *Data* section below). Other than providing the information on a batter based on the team and the range of seasons that he played in, it also provides an analysis on the batter's performance by calculating the number of attempts to steal bases(**sb_attempts**), the percentage of stolen base attempts that were successful(**sb_perc**), and strike out rate(**so_rate**). In addition, the app helps visualize the batter's performance in the form of a line graph under the *Input/Visualization* tab or a table under the *Table* tab. In conclusion, the Batter App is a tool to help in the exploration, visualization, and analysis of the batters listed in the **baseballr** package from a range of seasons from 2008 to 2024, inclusive.
+
+## Data
+
+The data that is being used for the Batter App is a R package called **baseballr**.\
+**baseballr** is mainly used for baseball analysis.\
+According to the website **baseballr**(under the reference page), this package helps present that data of batters which have been scraped from different websites.\
+As there are tons of data about different players in the history of Baseball, this app focuses on the batters who have played in seasons 2008 to 2024.\
+
+Under the **data** folder, there is a file called **baseball-data.R** which helps collect data about each batter and stores it under the **daily-batting.csv** file.\
+When it is called in **app.py**, the data is retrieved with a slight modification.\
+This app does not include players' data who have switched teams in the middle of the season and it only focuses on the following information:
+
+::: {.row}
+::: {.col-md-2}
+*   Season
+*   Name
+*   Age
+*   Team
+*   Number of games played(**G**)
+*   Plate Appearance(**PA**)
+*   At Bats(**AB**)
+*   Runs(**R**)
+:::
+
+::: {.col-md-2}
+*   Hits(**H**)
+*   Home Runs(**HR**)
+*   Strikeouts(**SO**)
+*   Sacrifice Hit/Bunt(**SH**)
+*   Hit by pitch(**HBP**)
+*   Stolen Base(**SB**)
+*   Caught Stealing(**CS**)
+*   Batting Average(**BA**)
+:::
+
+::: {.col-md-2}
+*   Grounded into double play(**GDP**)
+:::
+:::
+
+## References
+
+-   [baseballr](https://billpetti.github.io/baseballr/)
+-   [rmd Formating Documentation](https://bookdown.org/yihui/rmarkdown-cookbook/multi-column.html)
+-   [Shiny Components](https://shiny.posit.co/r/components/)
+-   [Shiny Cheatsheet](https://posit.co/wp-content/uploads/2022/10/shiny.pdf)
